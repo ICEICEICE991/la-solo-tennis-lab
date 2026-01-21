@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Practice Tennis Solo in LA | Indoor Court + Ball Machine</title>
+  <meta name="description" content="Practice tennis solo in Los Angeles. Indoor court + ball machine. No partner needed. Join the waitlist & book a trial." />
+  <meta property="og:title" content="Practice Tennis Solo in LA" />
+  <meta property="og:description" content="Indoor court + ball machine. No partner needed. No waiting. High-intensity practice." />
+  <meta property="og:type" content="website" />
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a31;
+      --text:#eaf0ff;
+      --muted:#a8b3cf;
+      --accent:#6ee7ff;
+      --accent2:#a78bfa;
+      --danger:#ff6b6b;
+      --ok:#51cf66;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --max: 1080px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(110,231,255,.20), transparent 55%),
+                  radial-gradient(900px 500px at 80% 0%, rgba(167,139,250,.18), transparent 55%),
+                  linear-gradient(180deg, #070b14, var(--bg));
+      color:var(--text);
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+      padding:14px 14px; border:1px solid var(--border); border-radius:var(--radius);
+      background: rgba(15,26,49,.65); backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{width:10px;height:10px;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+    .pill{
+      font-size:12px; padding:8px 10px; border:1px solid var(--border); border-radius:999px;
+      color:var(--muted); background: rgba(0,0,0,.15);
+    }
+    .hero{
+      display:grid; grid-template-columns: 1.2fr .8fr; gap:18px;
+      margin-top:18px;
+    }
+    @media (max-width: 900px){ .hero{grid-template-columns:1fr; } }
+    .card{
+      border:1px solid var(--border);
+      background: rgba(15,26,49,.70);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card .inner{padding:24px}
+    h1{
+      margin:0 0 10px;
+      font-size: clamp(30px, 4vw, 52px);
+      line-height:1.06;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.5;
+      margin:0 0 18px;
+    }
+    .points{
+      display:grid; gap:10px; margin:18px 0 0; padding:0; list-style:none;
+    }
+    .points li{
+      display:flex; gap:10px; align-items:flex-start;
+      padding:12px 12px;
+      border:1px solid var(--border);
+      border-radius:14px;
+      background: rgba(0,0,0,.12);
+    }
+    .check{
+      width:22px;height:22px;border-radius:7px;
+      background: rgba(110,231,255,.14);
+      border:1px solid rgba(110,231,255,.35);
+      display:grid; place-items:center;
+      flex:0 0 auto;
+      margin-top:1px;
+    }
+    .check svg{width:14px;height:14px; fill: none; stroke: var(--accent); stroke-width: 2.2}
+    .points b{display:block; margin-bottom:2px}
+    .priceRow{
+      display:flex; gap:10px; flex-wrap:wrap; margin-top:16px;
+    }
+    .tag{
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:8px 10px;
+      color:var(--text);
+      background: linear-gradient(90deg, rgba(110,231,255,.10), rgba(167,139,250,.10));
+      font-weight:650;
+      font-size:13px;
+    }
+    .tag span{color:var(--muted); font-weight:600}
+    form{display:grid; gap:12px; margin-top:12px}
+    label{font-size:12px; color:var(--muted)}
+    input{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    input:focus{border-color: rgba(110,231,255,.55)}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+    @media (max-width: 520px){ .row{grid-template-columns:1fr} }
+    .btn{
+      cursor:pointer;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid rgba(110,231,255,.45);
+      background: linear-gradient(90deg, rgba(110,231,255,.18), rgba(167,139,250,.18));
+      color:var(--text);
+      font-weight:750;
+      font-size:14px;
+    }
+    .btn:hover{filter:brightness(1.08)}
+    .fine{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.45;
+    }
+    .status{
+      margin-top:10px;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background: rgba(0,0,0,.12);
+      color: var(--muted);
+      font-size:13px;
+      display:none;
+    }
+    .status.ok{display:block; border-color: rgba(81,207,102,.35); color: rgba(220,255,230,.92); background: rgba(81,207,102,.10)}
+    .status.err{display:block; border-color: rgba(255,107,107,.35); color: rgba(255,230,230,.92); background: rgba(255,107,107,.08)}
+    .sideTitle{
+      margin:0 0 6px;
+      font-size:18px;
+      letter-spacing:-.2px;
+    }
+    .mini{
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.45;
+      margin:0 0 14px;
+    }
+    .grid2{
+      display:grid; grid-template-columns:1fr; gap:10px;
+    }
+    .box{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:12px;
+      background: rgba(0,0,0,.12);
+    }
+    .box b{display:block; margin-bottom:4px}
+    footer{
+      margin-top:18px;
+      color:var(--muted);
+      font-size:12px;
+      text-align:center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="card">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>LA Solo Tennis Lab</span>
+      </div>
+      <div class="pill">Indoor + Ball Machine • Waitlist Open</div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <div class="inner">
+          <h1>Practice Tennis Solo in LA</h1>
+          <p class="sub">
+            Indoor court + ball machine so you can train anytime — even without a partner.
+            No waiting, no wind, no “court got taken”.
+          </p>
+
+          <ul class="points">
+            <li>
+              <div class="check">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <b>No partner needed</b>
+                Train alone with consistent feeds — serve, forehand, backhand, footwork.
+              </div>
+            </li>
+            <li>
+              <div class="check">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <b>No waiting, no wind</b>
+                Book your slot, walk in, start training. Stable indoor environment.
+              </div>
+            </li>
+            <li>
+              <div class="check">
+                <svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <b>High-intensity practice</b>
+                Get 200–400 quality balls in a session. Great for busy professionals.
+              </div>
+            </li>
+          </ul>
+
+          <div class="priceRow" aria-label="pricing preview">
+            <div class="tag"><span>Hourly:</span> $35–45 / hour</div>
+            <div class="tag"><span>Membership:</span> available</div>
+            <div class="tag"><span>Location:</span> Los Angeles (TBD)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner">
+          <h2 class="sideTitle">Join the waitlist</h2>
+          <p class="mini">
+            Get early access pricing + opening dates. We only notify when we have real slots.
+          </p>
+
+          <!-- Option A (no backend): mailto submission via JS below -->
+          <form id="waitlistForm" novalidate>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@email.com" required />
+            </div>
+            <div class="row">
+              <div>
+                <label for="zip">ZIP code</label>
+                <input id="zip" name="zip" type="text" placeholder="90024" inputmode="numeric" required />
+              </div>
+              <div>
+                <label for="time">Preferred time</label>
+                <input id="time" name="time" type="text" placeholder="Weeknights 7–10pm" />
+              </div>
+            </div>
+            <button class="btn" type="submit">Join Waitlist / Book Trial</button>
+
+            <div id="status" class="status"></div>
+
+            <p class="fine">
+              By submitting, you agree we can email you about opening dates and trial slots.
+              We won’t sell your info.
+            </p>
+          </form>
+
+          <div class="grid2" style="margin-top:14px">
+            <div class="box">
+              <b>What you get</b>
+              Early access booking, trial session options, and membership details.
+            </div>
+            <div class="box">
+              <b>Who it’s for</b>
+              Busy professionals, USTA league players, and families who want structured practice.
+            </div>
+          </div>
+
+          <p class="mini" style="margin-top:14px">
+            Want partnership / coaching collaboration? Email:
+            <a href="#" id="contactEmailLink">hello@yourdomain.com</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> LA Solo Tennis Lab • This is a concept page to validate demand.
+    </footer>
+  </div>
+
+  <script>
+    // ======= CONFIG =======
+    // Replace with your real email (for receiving leads).
+    const OWNER_EMAIL = "yourname@gmail.com";
+
+    // If you want Formspree instead of mailto:
+    // 1) Create a Formspree form, get endpoint like https://formspree.io/f/xxxxxx
+    // 2) Set FORMSPREE_ENDPOINT to that URL and set USE_FORMSPREE = true
+    const USE_FORMSPREE = false;
+    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xxxxxx";
+    // ======================
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const contactLink = document.getElementById("contactEmailLink");
+    contactLink.textContent = OWNER_EMAIL;
+    contactLink.href = "mailto:" + OWNER_EMAIL;
+
+    const form = document.getElementById("waitlistForm");
+    const statusEl = document.getElementById("status");
+
+    function setStatus(type, msg){
+      statusEl.className = "status " + type;
+      statusEl.textContent = msg;
+    }
+
+    function validZip(zip){
+      // Simple US ZIP check: 5 digits (or 5-4)
+      return /^\d{5}(-\d{4})?$/.test(zip.trim());
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.className = "status";
+
+      const email = (document.getElementById("email").value || "").trim();
+      const zip = (document.getElementById("zip").value || "").trim();
+      const time = (document.getElementById("time").value || "").trim();
+
+      if(!email || !email.includes("@")){
+        setStatus("err", "Please enter a valid email.");
+        return;
+      }
+      if(!zip || !validZip(zip)){
+        setStatus("err", "Please enter a valid ZIP code (e.g., 90024).");
+        return;
+      }
+
+      const payload = {
+        email, zip, time,
+        source: "Landing Page",
+        created_at: new Date().toISOString()
+      };
+
+      // Store locally (optional): helps you see interest even if mail client doesn't open
+      try{
+        const key = "waitlist_submissions";
+        const prev = JSON.parse(localStorage.getItem(key) || "[]");
+        prev.push(payload);
+        localStorage.setItem(key, JSON.stringify(prev));
+      }catch(_){}
+
+      if (USE_FORMSPREE) {
+        try{
+          const res = await fetch(FORMSPREE_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(payload)
+          });
+          if(res.ok){
+            setStatus("ok", "Success! You’re on the waitlist. We’ll email you opening dates soon.");
+            form.reset();
+          }else{
+            setStatus("err", "Submitted locally, but server failed. Try again or email us.");
+          }
+        }catch(err){
+          setStatus("err", "Network error. Please try again or email us.");
+        }
+        return;
+      }
+
+      // Mailto fallback (no backend)
+      const subject = encodeURIComponent("Waitlist: LA Solo Tennis Lab");
+      const body = encodeURIComponent(
+        `New waitlist signup:\n\nEmail: ${email}\nZIP: ${zip}\nPreferred time: ${time || "(not provided)"}\n\n---\n(Submitted from landing page)`
+      );
+      const mailto = `mailto:${OWNER_EMAIL}?subject=${subject}&body=${body}`;
+
+      // Try open mail client
+      window.location.href = mailto;
+
+      setStatus("ok", "Thanks! If your email app didn’t open, please email us manually. You’re also saved locally on this device.");
+      form.reset();
+    });
+  </script>
+</body>
+</html>
